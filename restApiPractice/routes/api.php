@@ -22,4 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::ApiResource('/class', 'ApiController\PrimarySchoolController');
 Route::ApiResource('/subject', 'ApiController\SubjectController');
 Route::ApiResource('/section', 'ApiController\SectionController');
+Route::ApiResource('/student', 'ApiController\StudentController');
                                                                                     
