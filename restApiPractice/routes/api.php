@@ -23,4 +23,16 @@ Route::ApiResource('/class', 'ApiController\PrimarySchoolController');
 Route::ApiResource('/subject', 'ApiController\SubjectController');
 Route::ApiResource('/section', 'ApiController\SectionController');
 Route::ApiResource('/student', 'ApiController\StudentController');
-                                                                                    
+
+Route::group([
+
+    'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+
+});

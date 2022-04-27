@@ -94,6 +94,6 @@ class SectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $section = Section::findorfail($id)->delete();
     }
 }
